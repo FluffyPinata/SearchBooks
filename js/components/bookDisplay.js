@@ -1,5 +1,5 @@
 app.component('book-display', {
-	
+
 	props: {
 		book: {
 			type: String,
@@ -14,17 +14,13 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.authors}}</li>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         </ul>`,
-
-
 	computed: {
 		bookObj() {
-
 			if (this.book != null) {
 				return JSON.parse(this.book)
 			} else {
 				return null;
 			}
-
 		}
 	}
 
