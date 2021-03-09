@@ -7,6 +7,7 @@ app.component('book-display', {
 			default: null
 		}
 	},
+	
 	template:
 		/*html*/
 		`<ul class = "col-sm-12 col-md-6 col-xl-4">
@@ -14,6 +15,7 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.authors}}</li>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         </ul>`,
+
 	computed: {
 		bookObj() {
 			if (this.book != null) {
