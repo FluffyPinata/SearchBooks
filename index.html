@@ -36,7 +36,8 @@
             found {{ (result != null)? result.totalItems: ''}}
          </div>
          <div class="row">
-            <book-display v-if="result!=null" v-for="(book, index) in result.items" :key="book.id" :book="JSON.stringify(book)"></book-display>
+            <book-display v-if="result!=null" v-for="(book, index) in result.items" :key="book.id" :book="JSON.stringify(book)">
+            </book-display>
          </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
